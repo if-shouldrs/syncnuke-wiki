@@ -56,7 +56,7 @@ for path, page in pages.items():
 
 home = pages[ROOT / 'index.html']
 assert 'home-page' in home.classes and 'side-bar' not in home.classes
-assert not any(link.endswith('.js') for link in home.links)
+assert [link for link in home.links if link.endswith('.js')] == [f'{PREFIX}/assets/js/theme.js']
 spec_names = ['concepts', 'terminology', 'sync-client', 'media-player', 'networking',
               'coordination', 'protocols', 'data-saver']
 for name in ['', *spec_names]:
@@ -75,6 +75,10 @@ assert 'Protocols' in (ROOT / 'spec/data-saver/index.html').read_text()
 for path, page in pages.items():
     assert f'{PREFIX}/assets/css/syncnuke.css' in page.links, path
     assert 'project-nav' in page.classes, path
+    assert 'theme-toggle' in page.classes, path
+    if 'home-page' not in page.classes:
+        assert 'night-theme' in page.ids, path
+    assert f'{PREFIX}/assets/js/theme.js' in page.links, path
     text = path.read_text()
     assert 'This site uses' not in text and '>Just the Docs<' not in text, path
 assert (ROOT / 'CNAME').read_text().strip() == 'syncnuke.com'

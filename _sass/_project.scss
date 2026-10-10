@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --sn-background: #ffffff;
   --sn-surface: #f4f4f4;
   --sn-text: #333333;
@@ -28,7 +29,7 @@ pre { border: 1px solid var(--sn-border); border-radius: 2px; padding: 1rem; ove
 .home-title { display: flex; align-items: center; gap: 1rem; }
 .home-title img { width: 4rem; height: 4rem; }
 .project-wordmark { display: inline-flex; align-items: center; gap: .65rem; font-size: 1.2rem; font-weight: 750; color: var(--sn-heading); letter-spacing: -.04em; }
-.project-nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.project-nav-links { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
 .project-nav a { text-decoration: none; }
 .project-nav a:hover { text-decoration: underline; }
 .project-nav a[aria-current] { color: var(--sn-heading); }
@@ -50,7 +51,7 @@ pre { border: 1px solid var(--sn-border); border-radius: 2px; padding: 1rem; ove
 .home-content p, .home-content ul { max-width: 42rem; }
 .home-content .intro { font-size: 1.4rem; }
 .project-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.75rem 0 3rem; }
-.project-button { display: inline-block; background: var(--sn-brand); color: var(--sn-heading); padding: .6rem 1rem; border-radius: 2px; font-weight: 600; text-decoration: none; }
+.project-button { display: inline-block; background: var(--sn-brand); color: #222222; padding: .6rem 1rem; border-radius: 2px; font-weight: 600; text-decoration: none; }
 .home-footer { border-top: 1px solid var(--sn-border); padding-top: 1rem; padding-bottom: 2rem; font-size: .875rem; }
 .project-skip { position: absolute; left: 1rem; top: -5rem; padding: .5rem; background: var(--sn-background); }
 .project-skip:focus { top: 0; }
@@ -73,3 +74,28 @@ pre { border: 1px solid var(--sn-border); border-radius: 2px; padding: 1rem; ove
 .os-icon[aria-label="Windows"] { width: 1rem; height: 1rem; }
 // Compensate for the Apple silhouette's left inset to match the visible gaps.
 .os-icons--desktop .os-icon[aria-label="macOS"] { margin-left: -.2rem; }
+
+@mixin night-colors {
+  color-scheme: dark;
+  --sn-background: #27262b;
+  --sn-surface: #302d36;
+  --sn-text: #e6e1e8;
+  --sn-heading: #f5f2f7;
+  --sn-accent: #f5ec43;
+  --sn-border: #55515d;
+  --sn-code: #37333d;
+}
+:root[data-theme="dark"] { @include night-colors; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) { @include night-colors; }
+}
+.theme-toggle {
+  font: inherit;
+  color: var(--sn-heading);
+  background: var(--sn-surface);
+  border: 1px solid var(--sn-border);
+  border-radius: 2px;
+  padding: .25rem .5rem;
+  cursor: pointer;
+}
+.theme-toggle[aria-pressed="true"] { border-color: var(--sn-accent); }
