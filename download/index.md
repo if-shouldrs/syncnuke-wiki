@@ -14,7 +14,7 @@ The builds below are pre-releases and are still in development.
 SyncNuke Desktop connects your local media player to a SyncNuke session.
 The current player integration supports mpv.
 
-[Download SyncNuke Desktop 0.2.0 (ZIP)](https://github.com/if-shouldrs/syncnuke-desktop/releases/download/0.2.0/syncnuke-desktop-0.2.0.zip){: .project-button }
+[Download SyncNuke Desktop 0.2.1 (ZIP)](https://github.com/if-shouldrs/syncnuke-desktop/releases/download/0.2.1/syncnuke-desktop-0.2.1.zip){: .project-button }
 
 Extract the archive and launch with `start.sh` or `start.bat`.
 See the setup instructions for requirements and configuration.
