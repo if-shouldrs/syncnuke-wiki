@@ -16,7 +16,11 @@
     var button = document.querySelector('.theme-toggle');
     if (button) {
       button.hidden = false;
-      button.setAttribute('aria-pressed', String(dark));
+      var label = dark ? 'Switch to light mode' : 'Switch to night mode';
+      button.setAttribute('aria-label', label);
+      button.title = label;
+      button.querySelector('.theme-icon-moon').toggleAttribute('hidden', dark);
+      button.querySelector('.theme-icon-sun').toggleAttribute('hidden', !dark);
     }
   }
   // Apply before the body renders to avoid flashing the wrong theme.

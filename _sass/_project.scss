@@ -98,4 +98,6 @@ pre { border: 1px solid var(--sn-border); border-radius: 2px; padding: 1rem; ove
   padding: .25rem .5rem;
   cursor: pointer;
 }
-.theme-toggle[aria-pressed="true"] { border-color: var(--sn-accent); }
+:root[data-theme="dark"] .theme-toggle { border-color: var(--sn-accent); }
+.theme-icon { display: block; }
+.theme-icon[hidden] { display: none; }
