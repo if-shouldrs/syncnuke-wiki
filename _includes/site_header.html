@@ -1,0 +1,8 @@
+<nav class="project-nav" aria-label="Site navigation">
+  <a class="project-wordmark" href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}><img class="project-logo" src="{{ "/assets/images/syncnuke-logo.png" | relative_url }}" alt="" width="36" height="36"><span>SyncNuke</span></a>
+  <div class="project-nav-links">
+    <a href="{{ '/spec/' | relative_url }}"{% if page.url contains '/spec/' %} aria-current="true"{% endif %}>Specification</a>
+    <a href="{{ '/download/' | relative_url }}"{% if page.url contains '/download/' %} aria-current="true"{% endif %}>Download</a>
+    <a href="https://github.com/syncnuke">GitHub</a>
+  </div>
+</nav>

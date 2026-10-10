@@ -1,0 +1,75 @@
+:root {
+  --sn-background: #ffffff;
+  --sn-surface: #f4f4f4;
+  --sn-text: #333333;
+  --sn-heading: #222222;
+  --sn-accent: #665c00;
+  --sn-brand: #f5ec43;
+  --sn-border: #d8d8d8;
+  --sn-code: #eeeeee;
+  --sn-width: 54rem;
+  --sn-font: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --sn-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+}
+body { background: var(--sn-background); color: var(--sn-text); font-family: var(--sn-font); }
+a { color: var(--sn-accent); text-underline-offset: .18em; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--sn-accent); outline-offset: 3px; }
+h1, h2, h3 { color: var(--sn-heading); font-weight: 650; letter-spacing: -.025em; }
+code, pre { font-family: var(--sn-mono); }
+code { background: var(--sn-code); border-radius: 2px; }
+pre { border: 1px solid var(--sn-border); border-radius: 2px; padding: 1rem; overflow-x: auto; }
+.main-content table { border-collapse: collapse; box-shadow: none; }
+.main-content th, .main-content td { border: 1px solid var(--sn-border); }
+.main-content th { background: var(--sn-surface); }
+.main-content blockquote { border-left: 3px solid var(--sn-accent); margin-left: 0; padding-left: 1rem; }
+.project-nav { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; width: 100%; padding: 1rem 0; font-size: .875rem; }
+.project-logo { width: 2.25rem; height: 2.25rem; flex-shrink: 0; }
+.home-title { display: flex; align-items: center; gap: 1rem; }
+.home-title img { width: 4rem; height: 4rem; }
+.project-wordmark { display: inline-flex; align-items: center; gap: .65rem; font-size: 1.2rem; font-weight: 750; color: var(--sn-heading); letter-spacing: -.04em; }
+.project-nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
+.project-nav a { text-decoration: none; }
+.project-nav a:hover { text-decoration: underline; }
+.project-nav a[aria-current] { color: var(--sn-heading); }
+.side-bar + .main .main-header, .side-bar + .main .main-header.nav-open { display: flex; background: var(--sn-background); }
+.main-header { height: auto; flex-wrap: wrap; padding: 0 2rem; border-bottom: 1px solid var(--sn-border); }
+.main-header .project-nav { order: -1; }
+.main-header .search { flex-basis: 100%; min-height: 3rem; border-top: 1px solid var(--sn-border); }
+.side-bar { border-right: 1px solid var(--sn-border); }
+.nav-list .nav-list-item .nav-list-link { padding-top: .3rem; padding-bottom: .3rem; }
+.nav-list .nav-list-item .nav-list-link.active { background: var(--sn-code); }
+.sidebar-note { font-size: .75rem; line-height: 1.5; color: var(--sn-text); }
+.home-page { margin: 0; line-height: 1.65; font-size: 1rem; }
+.home-page * { box-sizing: border-box; }
+.home-header, .home-content, .home-footer { max-width: var(--sn-width); margin: 0 auto; padding-left: 2rem; padding-right: 2rem; }
+.home-header { border-bottom: 1px solid var(--sn-border); }
+.home-content { padding-top: 4rem; padding-bottom: 3rem; }
+.home-content h1 { font-size: clamp(2.5rem, 7vw, 4rem); line-height: 1.1; margin: 0 0 1rem; }
+.home-content h2 { font-size: 1.4rem; margin-top: 3rem; padding-top: 1.25rem; border-top: 1px solid var(--sn-border); }
+.home-content p, .home-content ul { max-width: 42rem; }
+.home-content .intro { font-size: 1.4rem; }
+.project-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 1.5rem; margin: 1.75rem 0 3rem; }
+.project-button { display: inline-block; background: var(--sn-brand); color: var(--sn-heading); padding: .6rem 1rem; border-radius: 2px; font-weight: 600; text-decoration: none; }
+.home-footer { border-top: 1px solid var(--sn-border); padding-top: 1rem; padding-bottom: 2rem; font-size: .875rem; }
+.project-skip { position: absolute; left: 1rem; top: -5rem; padding: .5rem; background: var(--sn-background); }
+.project-skip:focus { top: 0; }
+@media (max-width: 50rem) {
+  .main-header { padding: 0 1rem; }
+  .project-nav { gap: .75rem; align-items: flex-start; flex-wrap: wrap; }
+  .project-nav-links { gap: .85rem; }
+  .home-header, .home-content, .home-footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+  .home-content { padding-top: 2.5rem; }
+}
+
+@media (min-width: 50rem) {
+  .main-header .search { height: 3rem !important; }
+}
+
+.download-heading { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.os-icons { display: inline-flex; align-items: center; gap: .65rem; padding-bottom: .2rem; border-bottom: 2px solid var(--sn-brand); color: var(--sn-heading); }
+.os-icon { display: block; width: 1.25rem; height: 1.25rem; flex-shrink: 0; }
+
+.os-icon[aria-label="Windows"] { width: 1rem; height: 1rem; }
+// Compensate for the Apple silhouette's left inset to match the visible gaps.
+.os-icons--desktop .os-icon[aria-label="macOS"] { margin-left: -.2rem; }
