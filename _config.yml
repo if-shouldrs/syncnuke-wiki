@@ -4,6 +4,13 @@ url: "https://syncnuke.com"
 baseurl: ""
 theme: just-the-docs
 color_scheme: syncnuke
+# Just the Docs 0.12 still uses legacy Sass imports and built-ins.
+# Remove these targeted suppressions once the upstream theme migrates.
+sass:
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
 lang: en
 permalink: pretty
 search_enabled: true
