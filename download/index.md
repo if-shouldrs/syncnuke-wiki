@@ -31,7 +31,9 @@ SyncNuke Android adds SyncNuke support to VLC.
 
 [Download SyncNuke Android 0.3.0 (APK)](https://github.com/if-shouldrs/syncnuke-android/releases/download/0.3.0/SyncNuke-Android-0.3.0-arm64-v8a.apk){: .project-button }
 
-Long-press the settings gear in the app to configure and enable synchronization.
+Settings can be found under "Casting" in the main application settings, or "Control settings" during playback. 
+
+Enable synchronization & update your room configuration as needed.
 
 [Release notes](https://github.com/if-shouldrs/syncnuke-android/releases/tag/0.3.0)
 · [All releases](https://github.com/if-shouldrs/syncnuke-android/releases)
