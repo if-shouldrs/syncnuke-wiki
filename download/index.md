@@ -33,7 +33,7 @@ SyncNuke Android adds SyncNuke support to VLC.
 
 Long-press the settings gear in the app to configure and enable synchronization.
 
-[Release notes](https://github.com/if-shouldrs/syncnuke-android/releases/tag/v0.216-syncnuke)
+[Release notes](https://github.com/if-shouldrs/syncnuke-android/releases/tag/0.3.0)
 · [All releases](https://github.com/if-shouldrs/syncnuke-android/releases)
 · [Source](https://github.com/if-shouldrs/syncnuke-android/tree/main)
 
