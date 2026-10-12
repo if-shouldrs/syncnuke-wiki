@@ -27,10 +27,9 @@ See the setup instructions for requirements and configuration.
 
 <h2 id="android" class="download-heading">Android {% include os_icons.html platform="android" %}</h2>
 
-SyncNuke Android adds SyncNuke support to Just Player.
-This is a work-in-progress debug build, published as a prerelease.
+SyncNuke Android adds SyncNuke support to VLC.
 
-[Download SyncNuke Android v0.216-syncnuke (APK)](https://github.com/if-shouldrs/syncnuke-android/releases/download/v0.216-syncnuke/Just.Player.v0.216-latest-accrescent-debug.apk){: .project-button }
+[Download SyncNuke Android 0.3.0 (APK)](https://github.com/if-shouldrs/syncnuke-android/releases/download/0.3.0/SyncNuke-Android-0.3.0-arm64-v8a.apk){: .project-button }
 
 Long-press the settings gear in the app to configure and enable synchronization.
 
